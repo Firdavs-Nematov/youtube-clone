@@ -40,25 +40,13 @@ export const VideoDetails = () => {
 
     if (!videoDetails?.snippet) return <Loader />;
 
-    // const {
-    //     snippet: {
-    //         title,
-    //         channelId,
-    //         channelTitle,
-    //         description,
-    //         tags,
-    //         thumbnails,
-    //     },
-    //     statistics: { viewCount, likeCount, commentCount },
-    // } = videoDetails;
-
     return (
         <Box minHeight={"90vh"} mb={10} px={"10px"}>
             <Box
                 display={"flex"}
-                sx={{ flexDirection: { sm: "column", md: "row" } }}
+                sx={{ flexDirection: { xs: "column", md: "row" } }}
             >
-                <Box width={{ sm: "100%", md: "75%" }}>
+                <Box width={{ xs: "100%", md: "75%" }}>
                     <ReactPlayer
                         url={`https://www/youtube.com/watch?v=${id}`}
                         className="react-player"
@@ -140,7 +128,7 @@ export const VideoDetails = () => {
                 </Box>
                 <Box
                     width={{
-                        sm: "100%",
+                        xs: "100%",
                         md: "25%",
                         overflowY: "scroll",
                         overflowX: "none",
